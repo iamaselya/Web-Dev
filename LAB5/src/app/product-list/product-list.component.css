@@ -1,0 +1,10 @@
+#x-button {
+  display: inline-block;
+  float: right;
+  cursor: pointer;
+}
+#title {
+  display: inline-block;
+  width: 100%;
+  margin: 0;
+}

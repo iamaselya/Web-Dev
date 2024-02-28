@@ -1,0 +1,25 @@
+<div *ngIf="product">
+  <h2><p id="back-arrow" [routerLink]="['/products', this.cat]">&larr;</p>
+    Product Details</h2>
+<h3>
+  <a [title]="product.name + ' details'">
+    {{product.name}}
+  </a>
+</h3>
+<div class="previewImg">
+  <img [src]="'../assets/images/'+product.image[this.product.curimg]">
+</div>
+<span id="controls"><p (click)="slide(0)">&lt;</p><p (click)="slide(1)">&gt;</p></span>
+<p *ngIf="product.price">
+  Price: {{product.price}}&#8376;
+</p>
+<p *ngIf="product.rating">
+  Rating: {{product.rating}}/5
+</p>
+<p *ngIf="product.description">
+  Description: {{ product.description }}
+</p>
+  <button pButton type="button" (click)="addToCart(product)">Add to cart</button>
+  <button pButton type="button" (click)="like()">Like</button>
+  <p>Likes: {{this.product.likes}}</p>
+</div>
