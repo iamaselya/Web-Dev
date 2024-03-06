@@ -1,0 +1,16 @@
+<div class="album" *ngIf="album.id != -1">
+  <p>User Id: {{album.userId}}</p>
+  <p>Album Id: {{album.id}}</p>
+  <p>Title: {{album.title}}</p>
+  <p class="x-btn" (click)="deleteItem()">x</p>
+</div>
+<div class="album-detailed" *ngIf="currentAlbum">
+  <a routerLink="/albums">&leftarrow;</a>
+  <h2>Album details</h2>
+  <p>User Id: <b>{{currentAlbum.userId}}</b></p>
+  <p>Album Id: <b>{{currentAlbum.id}}</b></p>
+  <a class="wrapper" [routerLink]="['/albums',currentAlbum.id,'photos',0]" *ngIf="currentAlbum.thumbnailUrl">Photos: <img src = "{{currentAlbum.thumbnailUrl}}"></a>
+  <div class = "wrapper"><div>Title: </div><div><textarea id="inp" value={{currentAlbum.title}} #inp></textarea></div></div>
+  <button (click)="saveItem(currentAlbum,inp.value)">Save</button>
+  <p class="x-btn" (click)="deleteItem()">x</p>
+</div>

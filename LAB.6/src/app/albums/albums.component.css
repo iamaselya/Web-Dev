@@ -1,0 +1,11 @@
+input {
+  width: 100%;
+}
+
+.album {
+  cursor: default;
+}
+
+.album:active {
+  background-color: #DDDDDD;
+}

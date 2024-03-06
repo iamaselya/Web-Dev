@@ -1,0 +1,12 @@
+<h1>Albums</h1>
+<div class="album">
+  <h3>Add a new album</h3>
+  <p>User Id: <input type="text" #inp1></p>
+  <p>Album Id: <input type="text" #inp2></p>
+  <p>Title: <input type="text" #inp3></p>
+  <p>Thumbnail url: <input type="text" #inp4></p>
+  <p>Url: <input type="text" #inp5></p>
+  <button (click)="addItem(inp1.value,inp2.value,inp3.value,inp4.value,inp5.value)">Add</button>
+</div>
+<app-album-detail *ngFor="let album of albums" [album]="album" (deleteEvent)="deleteItem(album.id)"
+[routerLink]="['/albums',album.id]"></app-album-detail>
