@@ -1,0 +1,8 @@
+.company {
+  background-color: #DDDDFF;
+  border : black solid .1em;
+  cursor: pointer;
+}
+.company h5 {
+  font-weight: normal;
+}

@@ -1,0 +1,8 @@
+<div><h1>Vacancies of the company #{{com}}</h1></div>
+<div *ngFor="let v of vacancies" class = "vacancy">
+  <h3>Vacancy</h3>
+  <h5>Name: {{v.name}}</h5>
+  <h5>Description: {{v.description}}</h5>
+  <h5>Salary: {{v.salary}}$</h5>
+  <h5>Company id: {{v.company}}</h5>
+</div>

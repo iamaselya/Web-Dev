@@ -1,0 +1,7 @@
+.vacancy {
+  background-color: #FFDDDD;
+  border : black solid .1em;
+}
+.vacancy h5 {
+  font-weight: normal;
+}
